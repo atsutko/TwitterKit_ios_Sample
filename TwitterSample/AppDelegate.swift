@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TwitterKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +17,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        TWTRTwitter.sharedInstance().start(withConsumerKey: "Tm9dvKik3ZnxuWsAm2zwAO15S", consumerSecret: "H7auawpeQ23cjwhMriPY35OKfy6XDCkp1ZSfWfu5WnE7lpCGLx")
+        
+        let ud = UserDefaults.standard
+        let isLogin = ud.bool(forKey: "isSignIn")
+        
+        if isLogin == false {
+            // ログイン済でなかった場合、ログイン用のStoryboardを初期画面として起動。
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            let storyboard = UIStoryboard(name: "TwitterLogin", bundle: Bundle.main)
+            let rootViewController = storyboard.instantiateViewController(withIdentifier: "RootNavigationController")
+            self.window?.rootViewController = rootViewController
+            self.window?.backgroundColor = UIColor.white
+            self.window?.makeKeyAndVisible()
+            
+         
+        } else{
+            //ログイン済みの場合はMain.storyboardをそのまま表示
+        }
+        
         return true
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        return TWTRTwitter.sharedInstance().application(app, open: url, options: options)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
