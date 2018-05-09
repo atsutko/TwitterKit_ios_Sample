@@ -26,6 +26,10 @@
 		C199094A209C591F00CF6AB9 /* user_male_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C1990949209C591F00CF6AB9 /* user_male_icon.png */; };
 		C1990955209C732300CF6AB9 /* TwitterKitSample.m in Sources */ = {isa = PBXBuildFile; fileRef = C1990954209C732300CF6AB9 /* TwitterKitSample.m */; };
 		C199095A209D6E4100CF6AB9 /* TwitterAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1990959209D6E4100CF6AB9 /* TwitterAPI.swift */; };
+		C1B459F420A2C8A300C9AB51 /* Tweets.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B459F320A2C8A300C9AB51 /* Tweets.swift */; };
+		C1B459F620A2CAB300C9AB51 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B459F520A2CAB300C9AB51 /* Author.swift */; };
+		C1B459F920A2D06F00C9AB51 /* heart-outline@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1B459F720A2D06F00C9AB51 /* heart-outline@2x.png */; };
+		C1B459FA20A2D06F00C9AB51 /* heart-fill@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1B459F820A2D06F00C9AB51 /* heart-fill@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +59,10 @@
 		C1990954209C732300CF6AB9 /* TwitterKitSample.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwitterKitSample.m; sourceTree = "<group>"; };
 		C1990956209C733900CF6AB9 /* TwitterSample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TwitterSample-Bridging-Header.h"; sourceTree = "<group>"; };
 		C1990959209D6E4100CF6AB9 /* TwitterAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterAPI.swift; sourceTree = "<group>"; };
+		C1B459F320A2C8A300C9AB51 /* Tweets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweets.swift; sourceTree = "<group>"; };
+		C1B459F520A2CAB300C9AB51 /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
+		C1B459F720A2D06F00C9AB51 /* heart-outline@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart-outline@2x.png"; sourceTree = "<group>"; };
+		C1B459F820A2D06F00C9AB51 /* heart-fill@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart-fill@2x.png"; sourceTree = "<group>"; };
 		F17016A437E24C4524471160 /* Pods-TwitterSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-TwitterSample/Pods-TwitterSample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,19 +123,14 @@
 		C1990912209B451800CF6AB9 /* TwitterSample */ = {
 			isa = PBXGroup;
 			children = (
-				C1990945209C590800CF6AB9 /* icons8-back-25.png */,
-				C1990949209C591F00CF6AB9 /* user_male_icon.png */,
-				C1990944209C590800CF6AB9 /* icons8-expand-arrow-25.png */,
-				C1990943209C590800CF6AB9 /* icons8-phone-25.png */,
-				C199092A209B507A00CF6AB9 /* Button（Twitterログイン）.png */,
 				C1990913209B451800CF6AB9 /* AppDelegate.swift */,
-				C1990959209D6E4100CF6AB9 /* TwitterAPI.swift */,
-				C199092E209B50FB00CF6AB9 /* TwitterLoginViewController.swift */,
 				C199093B209C4D3800CF6AB9 /* TwitterTimeLineShowViewController.swift */,
-				C199093F209C55FD00CF6AB9 /* TwitterTimeLineTableViewCell.swift */,
-				C1990940209C55FD00CF6AB9 /* TwitterTimeLineTableViewCell.xib */,
 				C1990917209B451800CF6AB9 /* Main.storyboard */,
-				C199092C209B50E200CF6AB9 /* TwitterLogin.storyboard */,
+				C1B459FB20A2D07300C9AB51 /* Image */,
+				C1B459FC20A2D08100C9AB51 /* API */,
+				C1B459FD20A2D0AA00C9AB51 /* RealmModel */,
+				C1B459FE20A2D0CE00C9AB51 /* TwitterLogin */,
+				C1B459FF20A2D10300C9AB51 /* Nib */,
 				C199091A209B451800CF6AB9 /* Assets.xcassets */,
 				C199091C209B451800CF6AB9 /* LaunchScreen.storyboard */,
 				C1990954209C732300CF6AB9 /* TwitterKitSample.m */,
@@ -135,6 +138,55 @@
 				C199091F209B451800CF6AB9 /* Info.plist */,
 			);
 			path = TwitterSample;
+			sourceTree = "<group>";
+		};
+		C1B459FB20A2D07300C9AB51 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				C1990945209C590800CF6AB9 /* icons8-back-25.png */,
+				C1990949209C591F00CF6AB9 /* user_male_icon.png */,
+				C1990944209C590800CF6AB9 /* icons8-expand-arrow-25.png */,
+				C1990943209C590800CF6AB9 /* icons8-phone-25.png */,
+				C199092A209B507A00CF6AB9 /* Button（Twitterログイン）.png */,
+				C1B459F820A2D06F00C9AB51 /* heart-fill@2x.png */,
+				C1B459F720A2D06F00C9AB51 /* heart-outline@2x.png */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		C1B459FC20A2D08100C9AB51 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				C1990959209D6E4100CF6AB9 /* TwitterAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		C1B459FD20A2D0AA00C9AB51 /* RealmModel */ = {
+			isa = PBXGroup;
+			children = (
+				C1B459F320A2C8A300C9AB51 /* Tweets.swift */,
+				C1B459F520A2CAB300C9AB51 /* Author.swift */,
+			);
+			path = RealmModel;
+			sourceTree = "<group>";
+		};
+		C1B459FE20A2D0CE00C9AB51 /* TwitterLogin */ = {
+			isa = PBXGroup;
+			children = (
+				C199092E209B50FB00CF6AB9 /* TwitterLoginViewController.swift */,
+				C199092C209B50E200CF6AB9 /* TwitterLogin.storyboard */,
+			);
+			path = TwitterLogin;
+			sourceTree = "<group>";
+		};
+		C1B459FF20A2D10300C9AB51 /* Nib */ = {
+			isa = PBXGroup;
+			children = (
+				C199093F209C55FD00CF6AB9 /* TwitterTimeLineTableViewCell.swift */,
+				C1990940209C55FD00CF6AB9 /* TwitterTimeLineTableViewCell.xib */,
+			);
+			path = Nib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +262,8 @@
 				C1990946209C590800CF6AB9 /* icons8-phone-25.png in Resources */,
 				C1990942209C55FD00CF6AB9 /* TwitterTimeLineTableViewCell.xib in Resources */,
 				C199092D209B50E200CF6AB9 /* TwitterLogin.storyboard in Resources */,
+				C1B459FA20A2D06F00C9AB51 /* heart-fill@2x.png in Resources */,
+				C1B459F920A2D06F00C9AB51 /* heart-outline@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,11 +277,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TwitterSample/Pods-TwitterSample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
 				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
 			);
@@ -283,8 +341,10 @@
 			files = (
 				C1990955209C732300CF6AB9 /* TwitterKitSample.m in Sources */,
 				C199092F209B50FB00CF6AB9 /* TwitterLoginViewController.swift in Sources */,
+				C1B459F620A2CAB300C9AB51 /* Author.swift in Sources */,
 				C1990914209B451800CF6AB9 /* AppDelegate.swift in Sources */,
 				C1990941209C55FD00CF6AB9 /* TwitterTimeLineTableViewCell.swift in Sources */,
+				C1B459F420A2C8A300C9AB51 /* Tweets.swift in Sources */,
 				C199095A209D6E4100CF6AB9 /* TwitterAPI.swift in Sources */,
 				C199093C209C4D3900CF6AB9 /* TwitterTimeLineShowViewController.swift in Sources */,
 			);

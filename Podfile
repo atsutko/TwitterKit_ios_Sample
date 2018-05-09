@@ -8,5 +8,6 @@ target 'TwitterSample' do
   # Pods for TwitterSample
 
 pod ‘TwitterKit’
+pod 'RealmSwift'
 
 end
